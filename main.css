@@ -1,0 +1,55 @@
+body, html {
+  background-image: url('https://img00.deviantart.net/f55a/i/2015/320/1/7/pokeball_wallpaper_by_drpokelover-d9gwrgf.jpg');
+  background-repeat: repeat;
+  background-position: center;
+  height: 100%;
+  margin: 0;
+}
+
+.headNav {
+  background-color: white;
+  color: red;
+  font-family: 'gugi', cursive;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position:fixed;
+  width: 100%;
+  cursor: pointer;
+}
+
+input {
+  border-radius: 5px;
+}
+
+.DeliContainer {
+  background-image: url("https://pokewalls.files.wordpress.com/2011/04/225delibird1600x1200.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  border-radius: 9px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.SquirtleContainer {
+  background-image: url("https://img00.deviantart.net/bfdd/i/2016/273/8/4/squirtle_wallpaper_by_awesomalicious-dajexu4.png");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  border-radius: 9px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.LoudredContainer {
+  background-image: url("https://pokewalls.files.wordpress.com/2012/12/294loudred1920x1200.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  margin:0 auto;
+}
