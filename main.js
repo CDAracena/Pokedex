@@ -29,7 +29,7 @@ delibirdIntro.addEventListener('click',function(){
 
     let delibird = new Pokemon(response);
 
-    console.log(delibird.defense)
+    console.log(delibird.hp)
 
     let deliSelect = document.createElement("select");
 
@@ -60,7 +60,15 @@ delibirdIntro.addEventListener('click',function(){
     deliInput3.appendChild(deliDef);
     deliInput4.appendChild(deliAbi);
 
-    document.querySelector('.deliStats').innerHTML = delibird.defense;
+      deliSelect.addEventListener('change', function(){
+        if (deliSelect.value === "HP") {
+          document.querySelector('.deliStats').innerText="My HP is : " + delibird.hp;
+        } else if (deliSelect.value ==="ATK") {
+          document.querySelector('.deliStats').innerText = "My Attack level is " + delibird.attack;
+        } else if (deliSelect.value === "DEF") {
+          document.querySelector('.deliStats').innerText = "My defense level is " + delibird.defense;
+        }
+     })
 
 
   })
