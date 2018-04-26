@@ -9,12 +9,12 @@ body, html {
 .headNav {
   background-color: white;
   color: red;
-  font-family: 'gugi', cursive;
+  font-family: 'Press Start 2P', cursive;
   height: 40px;
   font-size: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   position:fixed;
   width: 100%;
   cursor: pointer;
@@ -22,6 +22,28 @@ body, html {
 
 input {
   border-radius: 5px;
+}
+
+@keyframes pokeballDuration{
+  0%{
+    visibility: visible;
+  }
+  25%{
+    visibility: visible;
+  }
+  50%{
+    visibility: visible;
+  }
+  75%{
+    visibility: visible;
+  }
+  100%{
+    visibility: hidden;
+  }
+}
+.myPokeBall {
+  animation: pokeballDuration 2s;
+  animation-fill-mode: forwards;
 }
 
 .DeliContainer {
@@ -33,6 +55,24 @@ input {
   display: flex;
   margin: 0 auto;
 }
+.deliTalk {
+border: 1px solid white;
+border-radius: 9px;
+padding-left: 34px;
+font-family: 'Press Start 2P';
+color: white;
+}
+
+.deliBirdGif {
+  font-family:'Press Start 2P', cursive;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+.deliBirdGif:hover {
+  box-shadow: 5px 5px 5px 5px black;
+}
+
 
 .SquirtleContainer {
   background-image: url("https://img00.deviantart.net/bfdd/i/2016/273/8/4/squirtle_wallpaper_by_awesomalicious-dajexu4.png");
