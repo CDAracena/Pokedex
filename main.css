@@ -10,7 +10,7 @@ body, html {
   background-color: white;
   color: red;
   font-family: 'Press Start 2P', cursive;
-  height: 40px;
+  height: auto;
   font-size: 20px;
   display: flex;
   flex-direction: row;
@@ -18,6 +18,7 @@ body, html {
   position:fixed;
   width: 100%;
   cursor: pointer;
+  z-index: 1;
 }
 
 input {
@@ -48,8 +49,11 @@ select {
   }
 }
 .myPokeBall {
-  animation: pokeballDuration 2s;
-  animation-fill-mode: forwards;
+  animation: pokeballDuration 2.4s infinite alternate;
+  position: fixed;
+  top: 104px;
+  margin-left: 280px;
+  cursor: pointer;
 }
 
 .DeliContainer {
@@ -59,6 +63,7 @@ select {
   border-radius: 9px;
   margin: 0 auto;
   height: auto;
+  visibility: hidden;
 }
 
 .deliTalk {
@@ -80,6 +85,7 @@ color: white;
   font-family: 'Press Start 2P';
   color: #de3e32;
   font-size: 25px;
+  text-align: center;
 }
 
 .SquirtleContainer {
@@ -89,6 +95,9 @@ color: white;
   height: auto;
   border-radius: 9px;
   margin: 0 auto;
+  margin-top: 25px;
+  padding-bottom: 105px;
+  visibility: hidden;
 }
 
 .squirtleTalk {
@@ -111,6 +120,7 @@ color: #34535d;
 font-size: 25px;
 font-family: 'Press Start 2P';
 border-radius: 5px;
+text-align: center;
 }
 
 .LoudredContainer {
@@ -119,6 +129,9 @@ border-radius: 5px;
   background-position: center;
   border-radius: 10px;
   margin:0 auto;
+  margin-top: 25px;
+  padding-bottom: 105px;
+  visibility: hidden;
 }
 
 .loudredGif {
@@ -142,4 +155,93 @@ border-radius: 5px;
   border-radius: 3px;
   font-size: 25px;
   font-family: 'Press Start 2P';
+  text-align: center;
+}
+
+.loadCharacters {
+  animation: appear 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes appear {
+  0%{
+    opacity: 0.0;
+  }
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 500px) {
+  .deliTalk {
+    width: 50%;
+    padding-left: 0px;
+  }
+  .deliStats {
+    font-size: 20px;
+  }
+  .squirtleStats {
+    font-size: 20px;
+    top:105px;
+  }
+  .squirtleGif {
+    width: 30%;
+  }
+  .squirtleCenter {
+    text-align: center;
+  }
+  .squirtleContainer {
+    padding-bottom:0px;
+  }
+  .loudredStats {
+    font-size: 20px;
+    width: 100%;
+    top: 105px;
+  }
+  .loudredTalk {
+    width: 58%;
+  }
+  .loudredGif {
+    width:30%;
+  }
+  .myPokeBall {
+    margin-left:0px;
+  }
+  .headNav {
+    font-size: 10px;
+
+  }
+}
+
+@media (max-width: 700px) {
+  .headNav {
+    width: auto;
+  }
+  .myPokeBall {
+    margin-left: 0px;
+  }
+  .deliTalk {
+    padding-left: 0px;
+    width: 50%;
+  }
+  .deliStats {
+    font-size: 20px;
+  }
+  .squirtleGif {
+    width: 25%;
+  }
+  .squirtleStats {
+    font-size: 20px;
+  }
+  .loudredTalk {
+    width: 50%;
+  }
 }

@@ -10,6 +10,19 @@ let squirtleIntro = document.querySelector('.squirtleGif');
 
 let loudredIntro = document.querySelector('.loudredGif');
 
+
+let pokeBallIntro = document.querySelector('.myPokeBall');
+
+pokeBallIntro.addEventListener('click', function(){
+  document.querySelector('.DeliContainer').style.visibility="visible";
+  document.querySelector('.SquirtleContainer').style.visibility="visible";
+  document.querySelector('.LoudredContainer').style.visibility="visible";
+  document.querySelector('.DeliContainer').classList.add('loadCharacters');
+  document.querySelector('.SquirtleContainer').classList.add('loadCharacters');
+  document.querySelector('.LoudredContainer').classList.add('loadCharacters');
+  pokeBallIntro.style.display="none";
+})
+
 class Pokemon {
   constructor(response) {
     this.hp = response.data.stats[5].base_stat;
@@ -27,7 +40,7 @@ delibirdIntro.addEventListener('click',function(){
 
     document.querySelector('.deliTalk').innerText = "Nice to meet you! What would you like to know?"
     document.querySelector('.deliTalk').classList.remove('col-lg-4');
-    document.querySelector('.deliTalk').classList.add('col-lg-8');
+    document.querySelector('.deliTalk').classList.add('col-lg-6');
 
 
     let delibird = new Pokemon(response);
