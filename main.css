@@ -24,6 +24,12 @@ input {
   border-radius: 5px;
 }
 
+select {
+  background-color: white;
+  color: red;
+  border-radius: 3px;
+}
+
 @keyframes pokeballDuration{
   0%{
     visibility: visible;
@@ -50,13 +56,12 @@ input {
   background-image: url("https://pokewalls.files.wordpress.com/2011/04/225delibird1600x1200.jpg");
   background-size: cover;
   background-position: center;
-  height: 100%;
   border-radius: 9px;
-  display: flex;
   margin: 0 auto;
+  height: auto;
 }
+
 .deliTalk {
-border: 1px solid white;
 border-radius: 9px;
 padding-left: 34px;
 font-family: 'Press Start 2P';
@@ -69,27 +74,72 @@ color: white;
   color: white;
   cursor: pointer;
 }
-.deliBirdGif:hover {
-  box-shadow: 5px 5px 5px 5px black;
-}
 
+.deliStats {
+  border-radius: 9px;
+  font-family: 'Press Start 2P';
+  color: #de3e32;
+  font-size: 25px;
+}
 
 .SquirtleContainer {
   background-image: url("https://img00.deviantart.net/bfdd/i/2016/273/8/4/squirtle_wallpaper_by_awesomalicious-dajexu4.png");
   background-size: cover;
   background-position: center;
-  height: 100%;
+  height: auto;
   border-radius: 9px;
-  display: flex;
   margin: 0 auto;
+}
+
+.squirtleTalk {
+  border-radius: 9%;
+  font-family: 'Press Start 2P';
+  color: white;
+}
+
+.squirtleGif {
+  cursor: pointer;
+}
+.squirtleSelects {
+background-color: white;
+color: #86c4d0;
+border-radius: 3px;
+}
+
+.squirtleStats {
+color: #34535d;
+font-size: 25px;
+font-family: 'Press Start 2P';
+border-radius: 5px;
 }
 
 .LoudredContainer {
   background-image: url("https://pokewalls.files.wordpress.com/2012/12/294loudred1920x1200.jpg");
   background-size: cover;
   background-position: center;
-  height: 100%;
   border-radius: 10px;
-  display: flex;
   margin:0 auto;
+}
+
+.loudredGif {
+  cursor: pointer;
+}
+
+.loudredTalk {
+  border-radius: 9px;
+  font-family: 'Press Start 2P';
+  color: white;
+}
+
+.loudredSelects {
+  background-color: white;
+  color: purple;
+  border-radius: 3px;
+}
+
+.loudredStats {
+  color: purple;
+  border-radius: 3px;
+  font-size: 25px;
+  font-family: 'Press Start 2P';
 }
