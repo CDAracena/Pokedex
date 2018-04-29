@@ -88,7 +88,7 @@ delibirdIntro.addEventListener('click',function(){
         } else if (deliSelect.value === "ABILITIES") {
           document.querySelector('.deliStats').style.backgroundColor="white";
           let abilityArr = delibird.abilities;
-          let text="";
+          let text=[""];
           for (let i = 0; i < abilityArr.length; i++) {
             text += abilityArr[i].ability.name + "<br>";
           document.querySelector('.deliStats').innerHTML = "My abilities are: " + text;
@@ -155,7 +155,7 @@ squirtleIntro.addEventListener('click', function(){
        } else if (squirtleSelect.value === "ABILITIES") {
          document.querySelector('.squirtleStats').style.backgroundColor="white";
          let abilityArr = squirtle.abilities;
-         let text="";
+         let text=[""];
          for (let i = 0; i < abilityArr.length; i++) {
            text += abilityArr[i].ability.name + "<br>";
          document.querySelector('.squirtleStats').innerHTML = "My abilities are: " + text;
@@ -219,7 +219,7 @@ loudredIntro.addEventListener('click', function(){
       } else if (loudredSelect.value === "ABILITIES") {
         document.querySelector('.loudredStats').style.backgroundColor="white";
         let abilityArr = loudred.abilities;
-        let text="";
+        let text=[""];
         for (let i = 0; i < abilityArr.length; i++) {
           text += abilityArr[i].ability.name + "<br>";
         document.querySelector('.loudredStats').innerHTML = "My abilities are: " + text;
