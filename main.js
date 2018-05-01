@@ -10,8 +10,21 @@ let squirtleIntro = document.querySelector('.squirtleGif');
 
 let loudredIntro = document.querySelector('.loudredGif');
 
-
 let pokeBallIntro = document.querySelector('.myPokeBall');
+
+let searchTask = document.querySelector('input');
+
+searchTask.addEventListener('keyup', function(){
+  if(searchTask.value === "delibird" || searchTask.value === "Delibird") {
+    alert('Delibird Type:Ice & Flying')
+  } else if (searchTask.value === "squirtle" || searchTask.value === "Squirtle") {
+    alert('Squirtle Type: Water')
+  } else if (searchTask.value === "loudred" || searchTask.value === "Loudred") {
+    alert('Loudred Type: Normal')
+  } else if (searchTask.value === "kiko" || searchTask.value === "Kiko") {
+    alert("Kiko's Pokemons: Delibird, Squirtle & Loudred");
+  }
+})
 
 pokeBallIntro.addEventListener('click', function(){
   document.querySelector('.DeliContainer').style.visibility="visible";
