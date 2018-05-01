@@ -14,17 +14,45 @@ let pokeBallIntro = document.querySelector('.myPokeBall');
 
 let searchTask = document.querySelector('input');
 
+let myModal = document.querySelector('.modal');
+
+let Xspan = document.querySelector ('.close');
+
+console.log("Here's a secret: try typing one of my Pokemon's names in the search bar...;)")
+
 searchTask.addEventListener('keyup', function(){
   if(searchTask.value === "delibird" || searchTask.value === "Delibird") {
-    alert('Delibird Type:Ice & Flying')
+    myModal.style.display= "block";
+    document.querySelector('.modal-content').style.backgroundColor = "red";
+    document.querySelector('.modal-img').src = "http://24.media.tumblr.com/27e1dbcca8c1a55107def6a83a2d7107/tumblr_mkfkfsyMpY1qjcuiko5_400.gif";
+
   } else if (searchTask.value === "squirtle" || searchTask.value === "Squirtle") {
-    alert('Squirtle Type: Water')
+    myModal.style.display="block";
+    document.querySelector('.modal-content').style.backgroundColor="#86c4d0";
+    document.querySelector('.modal-img').src = "http://24.media.tumblr.com/tumblr_mdpena2IZx1qlms3vo1_500.gif";
+
   } else if (searchTask.value === "loudred" || searchTask.value === "Loudred") {
-    alert('Loudred Type: Normal')
+    myModal.style.display="block";
+    document.querySelector('.modal-content').style.backgroundColor = "purple";
+    document.querySelector('.modal-img').src = "http://25.media.tumblr.com/d72b6913e795a315173587cf9bc34c04/tumblr_mibr63pADZ1rtatqpo1_500.gif";
+
   } else if (searchTask.value === "kiko" || searchTask.value === "Kiko") {
     alert("Kiko's Pokemons: Delibird, Squirtle & Loudred");
   }
 })
+
+  Xspan.addEventListener('click', function(){
+    myModal.style.display="none";
+    searchTask.value = "";
+  })
+
+  window.onclick = function(event) {
+    if (event.target == myModal) {
+        myModal.style.display = "none";
+        searchTask.value=""
+    }
+}
+
 
 pokeBallIntro.addEventListener('click', function(){
   document.querySelector('.DeliContainer').style.visibility="visible";
