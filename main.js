@@ -25,19 +25,26 @@ searchTask.addEventListener('keyup', function(){
     myModal.style.display= "block";
     document.querySelector('.modal-content').style.backgroundColor = "red";
     document.querySelector('.modal-img').src = "http://24.media.tumblr.com/27e1dbcca8c1a55107def6a83a2d7107/tumblr_mkfkfsyMpY1qjcuiko5_400.gif";
+    document.querySelector('.KikoBio').style.display="none";
 
   } else if (searchTask.value === "squirtle" || searchTask.value === "Squirtle") {
     myModal.style.display="block";
     document.querySelector('.modal-content').style.backgroundColor="#86c4d0";
     document.querySelector('.modal-img').src = "http://24.media.tumblr.com/tumblr_mdpena2IZx1qlms3vo1_500.gif";
+    document.querySelector('.KikoBio').style.display="none";
 
   } else if (searchTask.value === "loudred" || searchTask.value === "Loudred") {
     myModal.style.display="block";
     document.querySelector('.modal-content').style.backgroundColor = "purple";
     document.querySelector('.modal-img').src = "http://25.media.tumblr.com/d72b6913e795a315173587cf9bc34c04/tumblr_mibr63pADZ1rtatqpo1_500.gif";
-
+    document.querySelector('.KikoBio').style.display="none";
+    
   } else if (searchTask.value === "kiko" || searchTask.value === "Kiko") {
-    alert("Kiko's Pokemons: Delibird, Squirtle & Loudred");
+    myModal.style.display="block";
+    document.querySelector('.modal-content').style.backgroundColor="white";
+    document.querySelector('.modal-img').src = "https://pa1.narvii.com/6445/afea78a767005261e68bd34bdd742511c9dd4dbd_hq.gif";
+    document.querySelector('.KikoBio').innerText = "Kiko is a long time NYC based Pokemon trainer. He has 3 Pokemons, Delibird, Squirtle and Loudred!";
+    document.querySelector('.KikoBio').style.display= "inline-block";
   }
 })
 
@@ -49,7 +56,7 @@ searchTask.addEventListener('keyup', function(){
   window.onclick = function(event) {
     if (event.target == myModal) {
         myModal.style.display = "none";
-        searchTask.value=""
+        searchTask.value="";
     }
 }
 
@@ -182,7 +189,7 @@ squirtleIntro.addEventListener('click', function(){
    squirtleInput2.appendChild(squirtleAtk);
    squirtleInput3.appendChild(squirtleDef);
    squirtleInput4.appendChild(squirtleAbi);
-//
+
      squirtleSelect.addEventListener('change', function(){
        if (squirtleSelect.value === "HP") {
          document.querySelector('.squirtleStats').style.backgroundColor="white";
