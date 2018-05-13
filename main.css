@@ -21,6 +21,20 @@ body, html {
   z-index: 1;
 }
 
+/* 
+  If you have the same styling applying to multiple selectors you can use the comma 
+  separated list. eg:
+
+  a, a:hover, a:visited {
+    text-decordation: none;
+  }
+
+  a, a:visited {
+    color: red;
+  }
+
+*/
+
 a {
   text-decoration: none;
   color: red;

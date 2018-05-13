@@ -21,6 +21,8 @@ let Xspan = document.querySelector('.close');
 console.log("Here's a secret: try typing one of my Pokemon's names in the search bar...;)")
 
 searchTask.addEventListener('keyup', function() {
+  // one little trick for doing a case-insensitive comparison is to use the .toLowerCase() method on a string
+  // so for example you could just say if (searchTask.value.toLowerCase() === "delibird")
   if (searchTask.value === "delibird" || searchTask.value === "Delibird") {
     myModal.style.display = "block";
     document.querySelector('.modal-content').style.backgroundColor = "red";
@@ -73,6 +75,7 @@ pokeBallIntro.addEventListener('click', function() {
 
 class Pokemon {
   constructor(response) {
+    // this looks good!
     this.hp = response.data.stats[5].base_stat;
     this.attack = response.data.stats[4].base_stat;
     this.defense = response.data.stats[3].base_stat;
@@ -91,9 +94,11 @@ delibirdIntro.addEventListener('click', function() {
       document.querySelector('.deliTalk').classList.add('col-lg-6');
 
 
+      // nice use of a constructor here!
       let delibird = new Pokemon(response);
 
 
+      // do we need to create these in the JS? Couldn't we just add them directly into the html?
       let deliSelect = document.createElement("select");
 
       let deliInput1 = document.createElement("option");
@@ -154,6 +159,10 @@ squirtleIntro.addEventListener('click', function() {
   axios.get(squirtleApi)
     .then(function(response) {
       console.log(response);
+
+      // It looks like a lot of this has been copied and pasted. Come talk to me to 
+      // see if there's an easier way of writing it.
+      // my comments in the first event listener will apply to these
 
       document.querySelector('.squirtleTalk').innerText = "Nice to meet you! What would you like to know?"
       document.querySelector('.squirtleTalk').classList.remove('col-lg-4');
@@ -219,6 +228,10 @@ loudredIntro.addEventListener('click', function() {
     .then(function(response) {
       console.log(response);
 
+      // It looks like a lot of this has been copied and pasted. Come talk to me to 
+      // see if there's an easier way of writing it.
+      // my comments in the first event listener will apply to these
+      
       document.querySelector('.loudredTalk').innerText = "Eh....I guess I can tell ya...make it fast!!"
       document.querySelector('.loudredTalk').classList.remove('col-lg-4');
       document.querySelector('.loudredTalk').classList.add('col-lg-8');
